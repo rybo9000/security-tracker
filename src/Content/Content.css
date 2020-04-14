@@ -1,0 +1,6 @@
+#content {
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 1;
+  background-color: blue;
+}
