@@ -1,0 +1,72 @@
+.addNewForm {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.addNewContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+  padding: 10px;
+}
+
+.addNewContainer a:link {
+  text-decoration: none;
+}
+
+.addNewContainer a:visited {
+  text-decoration: none;
+}
+
+.addNewContainer a:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.addNewContainer a:active {
+  opacity: 1;
+}
+
+.addNewContainer button {
+  background-color: #9c0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 1.5rem;
+  outline: 0;
+}
+
+.addNewContainer button:hover {
+  cursor: pointer;
+}
+
+.addNewForm input,
+button,
+label {
+  display: block;
+  margin: 10px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 850px) {
+}
+
+@media screen and (max-width: 700px) {
+  .addNewContainer button {
+    padding: 10px;
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .addNewContainer button {
+    font-size: 1rem;
+  }
+}

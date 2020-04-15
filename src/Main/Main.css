@@ -1,0 +1,16 @@
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.mainWrapper {
+  flex-basis: 100%;
+  max-width: 1200px;
+  color: #373a36;
+  font-family: "Open Sans", sans-serif;
+  margin: auto;
+}

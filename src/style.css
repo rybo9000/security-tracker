@@ -3,3 +3,9 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}

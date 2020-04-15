@@ -1,17 +1,13 @@
 import React from "react";
 
-import Header from "../Header/Header";
-import Content from "../Content/Content";
+import "./Main.css";
 
-class Main extends React.Component {
-  render() {
-    return (
-      <>
-        <Header />
-        <Content />
-      </>
-    );
-  }
+function Main(props) {
+  return (
+    <main>
+      <div className="mainWrapper">{props.children}</div>
+    </main>
+  );
 }
 
 export default Main;

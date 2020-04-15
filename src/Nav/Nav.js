@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Nav.css";
 
@@ -12,23 +13,23 @@ import {
 function Nav() {
   return (
     <nav>
-      <div class="navLink">
-        <a href="clients.html">
+      <div className="navLink">
+        <Link to="/clients">
           <FontAwesomeIcon icon={faUserFriends} className="navIcon" />
-          <span class="navText">Clients</span>
-        </a>
+          <span className="navText">Clients</span>
+        </Link>
       </div>
-      <div class="navLink">
-        <a href="security.html">
+      <div className="navLink">
+        <Link to="/security">
           <FontAwesomeIcon icon={faShieldAlt} className="navIcon" />
-          <span class="navText">Security Items</span>
-        </a>
+          <span className="navText">Security Items</span>
+        </Link>
       </div>
-      <div class="navLink">
-        <a href="categories.html">
+      <div className="navLink">
+        <Link to="/categories">
           <FontAwesomeIcon icon={faStickyNote} className="navIcon" />
-          <span class="navText">Categories</span>
-        </a>
+          <span className="navText">Categories</span>
+        </Link>
       </div>
     </nav>
   );

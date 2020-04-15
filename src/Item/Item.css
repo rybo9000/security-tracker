@@ -1,0 +1,78 @@
+.itemDiv {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 70%;
+  background-color: #e2e2e2;
+  color: #373a36;
+  border-radius: 3px;
+  margin: 10px 10px 10px 50px;
+  padding: 10px;
+  font-size: 1.75rem;
+  border: 1px solid lightgray;
+}
+
+.itemDiv:hover {
+  background-color: #ececec;
+}
+
+.itemDiv a:link {
+  text-decoration: none;
+  color: #373a36;
+}
+
+.itemDiv a:visited {
+  text-decoration: none;
+  color: #373a36;
+}
+
+.itemDiv a:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.itemDiv a:active {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.itemDiv .checkbox {
+  width: 25px;
+  height: 25px;
+}
+
+.itemIcon {
+  margin: 0 10px 0 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .itemDiv {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .itemDiv {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .itemDiv {
+    width: 95%;
+    margin: 10px;
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .itemDiv {
+    width: 95%;
+    margin: 5px;
+    font-size: 1rem;
+  }
+
+  .itemIcon {
+    margin: 0 5px 0 0;
+  }
+}

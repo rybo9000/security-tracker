@@ -18,16 +18,12 @@ nav {
   border: 1px solid #f9f9f9;
 }
 
-.navIcon {
-  margin: 0 10px 0 0;
-}
-
-.navLink:link {
+.navLink a:link {
   color: #373a36;
   text-decoration: none;
 }
 
-.navLink:visited {
+.navLink a:visited {
   color: #373a36;
   text-decoration: none;
 }
@@ -42,6 +38,10 @@ nav {
 
 .navLink:active {
   opacity: 1;
+}
+
+.navIcon {
+  margin: 0 10px 0 0;
 }
 
 @media screen and (max-width: 1000px) {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Header.css";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
@@ -9,7 +10,9 @@ class Header extends React.Component {
     return (
       <header>
         <div id="logoContainer">
-          <img src={logo} id="logo" alt="Axxys Logo" />
+          <Link to="/">
+            <img src={logo} id="logo" alt="Axxys Logo" />
+          </Link>
         </div>
         <HamburgerMenu />
       </header>

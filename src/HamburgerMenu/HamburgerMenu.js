@@ -1,14 +1,18 @@
 import React from "react";
+import { slide as Menu } from "react-burger-menu";
 
 import "./HamburgerMenu.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-function HamburgerMenu() {
-  const element = <FontAwesomeIcon icon={faBars} />;
-
-  return <div id="hamburgerMenu">{element}</div>;
+class HamburgerMenu extends React.Component {
+  render() {
+    return (
+      <Menu right>
+        <a id="home" className="menu-item" href="/">
+          Home
+        </a>
+      </Menu>
+    );
+  }
 }
 
 export default HamburgerMenu;
