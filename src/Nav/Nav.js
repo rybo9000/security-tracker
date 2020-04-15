@@ -13,24 +13,24 @@ import {
 function Nav() {
   return (
     <nav>
-      <div className="navLink">
-        <Link to="/clients">
+      <Link to="/clients">
+        <div className="navLink">
           <FontAwesomeIcon icon={faUserFriends} className="navIcon" />
           <span className="navText">Clients</span>
-        </Link>
-      </div>
-      <div className="navLink">
-        <Link to="/security">
+        </div>
+      </Link>
+      <Link to="/security">
+        <div className="navLink">
           <FontAwesomeIcon icon={faShieldAlt} className="navIcon" />
           <span className="navText">Security Items</span>
-        </Link>
-      </div>
-      <div className="navLink">
-        <Link to="/categories">
+        </div>
+      </Link>
+      <Link to="/categories">
+        <div className="navLink">
           <FontAwesomeIcon icon={faStickyNote} className="navIcon" />
           <span className="navText">Categories</span>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </nav>
   );
 }

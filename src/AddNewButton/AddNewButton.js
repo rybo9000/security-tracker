@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./AddNewButton.css";
 
 function AddNewButton(props) {
   return (
     <div className="addNewContainer">
-      <a href={props.link}>
+      <Link to={props.link}>
         <button>Add New {props.thing}</button>
-      </a>
+      </Link>
     </div>
   );
 }

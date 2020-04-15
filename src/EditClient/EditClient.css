@@ -1,0 +1,7 @@
+.editClientContainer {
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
+  color: #373a36;
+}

@@ -36,7 +36,7 @@
   opacity: 1;
 }
 
-.itemDiv .checkbox {
+.itemDiv input {
   width: 25px;
   height: 25px;
 }

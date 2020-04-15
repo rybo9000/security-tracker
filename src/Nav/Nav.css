@@ -1,3 +1,7 @@
+a:link {
+  text-decoration: none;
+}
+
 nav {
   display: flex;
   flex-flow: column nowrap;
@@ -16,16 +20,6 @@ nav {
   font-weight: bold;
   border-radius: 3px;
   border: 1px solid #f9f9f9;
-}
-
-.navLink a:link {
-  color: #373a36;
-  text-decoration: none;
-}
-
-.navLink a:visited {
-  color: #373a36;
-  text-decoration: none;
 }
 
 .navLink:hover {

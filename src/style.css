@@ -9,3 +9,96 @@ body {
   flex-flow: column nowrap;
   justify-content: flex-start;
 }
+
+a:link {
+  text-decoration: none;
+}
+
+/* FORMS USED IN ALL 'ADD XXXXXXXXXX' COMPONENTS */
+
+.addNewFormContainer {
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
+}
+
+.addNewForm {
+  background-color: #f9f9f9;
+  color: #373a36;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.addNewForm label {
+  margin-bottom: 0.5rem;
+}
+
+.addNewForm input {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  max-width: 90%;
+}
+
+.addNewForm select {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  max-width: 90%;
+  color: #373a36;
+  margin-left: 10px;
+}
+
+.addNewForm button {
+  margin: 20px 10px 10px 10px;
+  background-color: #9c0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 1.5rem;
+  outline: 0;
+}
+
+.addNewForm button:hover {
+  cursor: pointer;
+}
+
+/* END OF FORMS USED IN ALL 'ADD XXXXXXXXXX' COMPONENTS */
+
+@media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 850px) {
+}
+
+@media screen and (max-width: 700px) {
+  .addNewFormContainer h1 {
+    font-size: 1.25rem;
+  }
+
+  .addNewForm {
+    background-color: #f9f9f9;
+    color: #373a36;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .addNewForm button {
+    margin: 20px 10px 10px 10px;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1rem;
+    outline: 0;
+  }
+
+  .addNewForm label {
+    margin-bottom: 0.25rem;
+  }
+}
