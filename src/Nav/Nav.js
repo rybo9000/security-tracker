@@ -12,7 +12,7 @@ import {
 
 function Nav() {
   return (
-    <nav>
+    <nav class="sideNav">
       <Link to="/clients">
         <div className="navLink">
           <FontAwesomeIcon icon={faUserFriends} className="navIcon" />

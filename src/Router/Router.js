@@ -10,6 +10,7 @@ import NewClient from "../NewClient/NewClient";
 import NewSecurity from "../NewSecurity/NewSecurity";
 import NewCategory from "../NewCategory/NewCategory";
 import EditClient from "../EditClient/EditClient";
+import Report from "../Report/Report";
 
 const Router = () => (
   <BrowserRouter>
@@ -22,6 +23,7 @@ const Router = () => (
       <Route path="/addsecurity" component={NewSecurity} />
       <Route path="/addcategory" component={NewCategory} />
       <Route path="/editclient/:id" component={EditClient} />
+      <Route path="/report/:id" component={Report} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
