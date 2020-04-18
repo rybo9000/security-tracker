@@ -31,6 +31,16 @@ class Categories extends React.Component {
     };
   }
 
+  componentDidMount() {
+    fetch("http://localhost:8000/api/categories")
+      .then((response) => response.json())
+      .then((categories) =>
+        this.setState({
+          categories,
+        })
+      );
+  }
+
   render() {
     const categories = this.state.categories.map((category) => {
       return <Item itemName={category.name} key={category.id} />;

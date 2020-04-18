@@ -14,7 +14,7 @@ class Header extends React.Component {
             <img src={logo} id="logo" alt="Axxys Logo" />
           </Link>
         </div>
-        <HamburgerMenu />
+        <HamburgerMenu disableAutoFocus />
       </header>
     );
   }

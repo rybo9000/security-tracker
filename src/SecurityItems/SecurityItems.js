@@ -31,6 +31,16 @@ class SecurityItems extends React.Component {
     };
   }
 
+  componentDidMount() {
+    fetch("http://localhost:8000/api/securityitems")
+      .then((response) => response.json())
+      .then((items) =>
+        this.setState({
+          items,
+        })
+      );
+  }
+
   render() {
     const items = this.state.items.map((item) => {
       return <Item itemName={item.name} key={item.id} />;

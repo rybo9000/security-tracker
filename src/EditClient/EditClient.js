@@ -34,7 +34,7 @@ class EditClient extends React.Component {
 
   render() {
     const items = this.state.items.map((item) => {
-      return <Item itemName={item.name} checkBox />;
+      return <Item itemName={item.name} checkBox key={item.id} />;
     });
 
     return (

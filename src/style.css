@@ -67,6 +67,22 @@ a:link {
   cursor: pointer;
 }
 
+.addNewForm button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.error {
+  background-color: #9c0000;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  max-width: 400px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
 /* END OF FORMS USED IN ALL 'ADD XXXXXXXXXX' COMPONENTS */
 
 @media screen and (max-width: 1000px) {

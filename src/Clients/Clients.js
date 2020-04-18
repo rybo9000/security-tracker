@@ -31,6 +31,16 @@ class Clients extends React.Component {
     };
   }
 
+  componentDidMount() {
+    fetch("http://localhost:8000/api/clients")
+      .then((response) => response.json())
+      .then((clients) =>
+        this.setState({
+          clients,
+        })
+      );
+  }
+
   render() {
     const clients = this.state.clients.map((client) => {
       return (
