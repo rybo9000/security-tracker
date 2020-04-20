@@ -22,15 +22,12 @@ function Item(props) {
     ""
   );
 
-  const checkBox = props.checkBox ? <input type="checkbox"></input> : "";
-
   return (
     <div className="itemDiv">
       <span>{props.itemName}</span>
       <div>
         {editLink}
         {reportLink}
-        {checkBox}
       </div>
     </div>
   );

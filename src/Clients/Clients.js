@@ -5,6 +5,7 @@ import Content from "../Content/Content";
 import Nav from "../Nav/Nav";
 import Main from "../Main/Main.js";
 import Item from "../Item/Item";
+import config from "../config/config.js";
 import AddNewButton from "../AddNewButton/AddNewButton";
 
 class Clients extends React.Component {
@@ -32,7 +33,7 @@ class Clients extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8000/api/clients")
+    fetch(`${config.REACT_APP_API_ENDPOINT}/api/clients`)
       .then((response) => response.json())
       .then((clients) =>
         this.setState({
