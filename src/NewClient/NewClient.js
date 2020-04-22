@@ -12,9 +12,11 @@ class NewClient extends React.Component {
     super(props);
 
     this.state = {
-      name: ''
+      name: "",
     };
   }
+
+  // FORM IS SUBMITTED
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -49,19 +51,21 @@ class NewClient extends React.Component {
       });
   };
 
+  // HANDLE STATE CHANGE FOR ANY FORM FIELD ON THE PAGE
+
   handleChange(name, value) {
     this.setState({
-      [name]: value
-    })
+      [name]: value,
+    });
   }
 
   render() {
-
+    // IF AN ERROR IS CREATED IN STATE OUTPUT INFORMATION TO DOM
     const error = this.state.error ? (
       <div className="error">{this.state.error}</div>
     ) : (
-        ""
-      );
+      ""
+    );
     return (
       <>
         <Header />
@@ -73,7 +77,15 @@ class NewClient extends React.Component {
               <form className="addNewForm" onSubmit={this.handleSubmit}>
                 {error}
                 <label htmlFor="name">Client Name</label>
-                <input type="text" id="name" name="name" value={this.state.name} onChange={e => this.handleChange(e.target.name, e.target.value)} />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={this.state.name}
+                  onChange={(e) =>
+                    this.handleChange(e.target.name, e.target.value)
+                  }
+                />
                 <button type="submit">Submit</button>
               </form>
             </div>

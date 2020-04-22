@@ -8,6 +8,7 @@ import Main from "../Main/Main.js";
 import config from "../config/config.js";
 import "./NewSecurity.css";
 
+// PAGE TO CREATE A NEW SECURITY ITEM
 class NewSecurity extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,7 @@ class NewSecurity extends React.Component {
   }
 
   componentDidMount() {
+    // PULL THE LIST OF CATEGORIES FROM THE DB AND SET IN STATE / USED FOR DROPDOWN MENU
     fetch("http://localhost:8000/api/categories")
       .then((response) => response.json())
       .then((categories) =>
@@ -29,12 +31,14 @@ class NewSecurity extends React.Component {
       );
   }
 
+  // HANDLE CHANGE FOR ALL FORM FIELDS ON THE PAGE
   handleChange(name, value) {
     this.setState({
       [name]: value,
     });
   }
 
+  // HANDLE FORM SUBMIT
   handleSubmit = (e) => {
     e.preventDefault();
 
@@ -48,6 +52,7 @@ class NewSecurity extends React.Component {
       body: JSON.stringify({ name, category }),
     };
 
+    // POST A NEW SECURITY ITEM TO ADD TO THE DATABASE
     fetch(`${config.REACT_APP_API_ENDPOINT}/api/securityitems`, options)
       .then((response) => response.json())
       .then((response) => {
@@ -65,11 +70,17 @@ class NewSecurity extends React.Component {
           this.props.history.push("/security");
         }
       });
-  }
+  };
 
   render() {
+    // MAP THROUGH ARRAY OF CATEGORIES AND GENERATE CODE TO OUTPUT TO DOM IN DROPDOWN
+
     const categories = this.state.categories.map((category) => {
-      return <option value={category.id} key={category.id}>{category.name}</option>;
+      return (
+        <option value={category.id} key={category.id}>
+          {category.name}
+        </option>
+      );
     });
 
     const formDisplay = this.state.categories.length ? (
@@ -101,12 +112,12 @@ class NewSecurity extends React.Component {
         </form>
       </>
     ) : (
-        <div>
-          Before adding Security Items you will need to create a new Category in
-          the
-          <Link to="/categories"> Categories</Link> section!
-        </div>
-      );
+      <div>
+        Before adding Security Items you will need to create a new Category in
+        the
+        <Link to="/categories"> Categories</Link> section!
+      </div>
+    );
 
     return (
       <>

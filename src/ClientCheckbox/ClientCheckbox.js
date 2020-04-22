@@ -2,6 +2,8 @@ import React from "react";
 
 import "./ClientCheckbox.css";
 
+// CHECKBOX COMPONENT USED TO TOGGLE THE SECURITY STATUS OF AN ITEM FOR CLIENTS
+
 class ClientCheckbox extends React.Component {
   render() {
     return (

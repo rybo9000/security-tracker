@@ -5,7 +5,9 @@ import "./Item.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+// ITEM COMPONENT USED TO DISPLAY INFORMATION ACROSS MULTIPLE PAGES AS NEEDED
 function Item(props) {
+  // IF EDITLINK PROP EXISTS GENERATE CODE TO DISPLAY TO DOM
   const editLink = props.editLink ? (
     <Link to={props.editLink}>
       <FontAwesomeIcon icon={faEdit} className="itemIcon" />
@@ -14,6 +16,7 @@ function Item(props) {
     ""
   );
 
+  // IF REPORTLINK PROP EXISTS GENERATE CODE TO DISPLAY TO DOM
   const reportLink = props.reportLink ? (
     <Link to={props.reportLink}>
       <FontAwesomeIcon icon={faArrowRight} className="itemIcon" />

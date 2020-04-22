@@ -9,6 +9,8 @@ import config from "../config/config.js";
 
 import "./EditClient.css";
 
+// PAGE USED TO EDIT THE SECURITY ITEMS FOR A CLIENT
+
 class EditClient extends React.Component {
   constructor(props) {
     super(props);
@@ -20,9 +22,11 @@ class EditClient extends React.Component {
   }
 
   componentDidMount() {
+    // ASSIGN THE ID PARAMATER FROM THE URL TO A VARIABLE
     const id = this.props.match.params.id;
 
-    fetch(`${config.REACT_APP_API_ENDPOINT}/api/status?id=${id}`)
+    // PULL THE APPLICABLE ROWS FROM THE STATUS TABLE FOR THIS CLIENT
+    fetch(`${config.REACT_APP_API_ENDPOINT}/api/status/name?id=${id}`)
       .then((response) => response.json())
       .then((items) =>
         this.setState({
@@ -30,6 +34,7 @@ class EditClient extends React.Component {
         })
       );
 
+    // PULL THE NAME OF THE CLIENT FROM THE DB
     fetch(`${config.REACT_APP_API_ENDPOINT}/api/clients/${id}`)
       .then((response) => response.json())
       .then((response) => {
@@ -39,13 +44,10 @@ class EditClient extends React.Component {
       });
   }
 
+  // WHEN A CHECKBOX IS TOGGLED
   handleChecked = (id, status, index) => {
-    console.log(id);
-    console.log("status is " + status);
-
+    // VALUE = THE OPPOSITE OF THE CURRENT STATUS TO SEND TO POST REQUEST
     const value = !status;
-
-    console.log("value is " + value);
 
     const options = {
       method: "PATCH",
@@ -55,7 +57,7 @@ class EditClient extends React.Component {
       body: JSON.stringify({ id, value }),
     };
 
-    //
+    // SEND THE FETCH REQUEST TO TOGGLE THE ACTIVE STATUS IN THE STATUS TABLE
     fetch(`${config.REACT_APP_API_ENDPOINT}/api/status`, options)
       .then((response) => response.json())
       .then((response) => {
@@ -65,6 +67,7 @@ class EditClient extends React.Component {
             error: response.error,
           });
         } else {
+          // ADJUST CHANGE IN STATE AS WELL
           let itms = [...this.state.items];
           let itm = { ...itms[index] };
           itm.status = value;
@@ -72,11 +75,6 @@ class EditClient extends React.Component {
           this.setState({
             items: itms,
           });
-
-          // this.setState({
-          //   name: "",
-          //   error: "",
-          // });
         }
       });
   };
@@ -84,6 +82,7 @@ class EditClient extends React.Component {
   render() {
     let items;
 
+    // IF THE ITEMS ARRAY EXISTS MAP THROUGH AND CREATE THE <CLIENTCHECKBOX /> COMPONENTS TO OUTPUT TO THE DOM
     if (this.state.items) {
       items = this.state.items.map((item, index) => (
         <ClientCheckbox

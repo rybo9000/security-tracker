@@ -10,6 +10,7 @@ import {
   faStickyNote,
 } from "@fortawesome/free-solid-svg-icons";
 
+// NAV COMPONENT ON THE LEFT SIDE THAT SPANS ACROSS THE ENTIRE SITE
 function Nav() {
   return (
     <nav className="sideNav">

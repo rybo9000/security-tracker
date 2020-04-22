@@ -51,6 +51,7 @@ class NewCategory extends React.Component {
       });
   };
 
+  // ADJUST STATE FOR ALL FORM FIELDS ON THE PAGE
   handleChange = (name, value) => {
     this.setState({
       [name]: value,
@@ -58,6 +59,8 @@ class NewCategory extends React.Component {
   };
 
   render() {
+    // IF AN ERROR IS GENERATED IN STATE OUTPUT TO DOM
+
     const error = this.state.error ? (
       <div className="error">{this.state.error}</div>
     ) : (

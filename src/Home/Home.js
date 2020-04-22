@@ -6,6 +6,7 @@ import Nav from "../Nav/Nav";
 import Main from "../Main/Main.js";
 import Welcome from "../Welcome/Welcome";
 
+// COMPONENT FOR / PATH
 class Home extends React.Component {
   render() {
     return (

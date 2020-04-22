@@ -5,6 +5,7 @@ import "./Header.css";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import logo from "../img/axxys-logo.png";
 
+// HEADER COMPONENT ACROSS ENTIRE SITE
 class Header extends React.Component {
   render() {
     return (

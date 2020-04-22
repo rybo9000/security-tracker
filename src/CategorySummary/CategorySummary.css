@@ -1,0 +1,34 @@
+.catSummaryContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  color: white;
+  flex-basis: 250px;
+  padding: 10px 10px 5px 10px;
+  margin: 10px;
+  background-color: #9c0000;
+  border-radius: 5px;
+}
+
+.catSummaryHeader {
+  font-weight: bold;
+  margin-left: 2px;
+  font-size: 1.25rem;
+}
+
+.catSummaryInner {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 5px 0;
+  padding: 5px;
+  background-color: white;
+  flex: 1;
+  border-radius: 5px;
+}
+
+.catSummaryNumber {
+  color: #373a36;
+  font-size: 4rem;
+  font-weight: bold;
+}

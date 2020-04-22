@@ -8,9 +8,13 @@ import Item from "../Item/Item";
 import config from "../config/config.js";
 import AddNewButton from "../AddNewButton/AddNewButton";
 
+// /CLIENTS PAGE
+
 class Clients extends React.Component {
   constructor(props) {
     super(props);
+
+    // DUMMY DATA TO BE USED UNTIL THE FETCH REQUEST POPULATES STATE
 
     const dummyClients = [
       {
@@ -33,6 +37,8 @@ class Clients extends React.Component {
   }
 
   componentDidMount() {
+    // FETCH THE LIST OF CLIENTS AND SET IN STATE
+
     fetch(`${config.REACT_APP_API_ENDPOINT}/api/clients`)
       .then((response) => response.json())
       .then((clients) =>
@@ -43,6 +49,8 @@ class Clients extends React.Component {
   }
 
   render() {
+    // ITERATE THROUGH CLIENTS ARRAY IN STATE AND CREATE <ITEM /> COMPONENTS TO POPULATE DOM
+
     const clients = this.state.clients.map((client) => {
       return (
         <Item

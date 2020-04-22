@@ -11,6 +11,8 @@ class SecurityItems extends React.Component {
   constructor(props) {
     super(props);
 
+    // DUMMY DATA TO BE USED UNTIL FETCH REQUEST POPULATES STATE
+
     const dummyItems = [
       {
         name: "Antivirus",
@@ -31,6 +33,7 @@ class SecurityItems extends React.Component {
     };
   }
 
+  // PULL LIST OF SECURITY ITEMS FROM DB AND SET IN STATE
   componentDidMount() {
     fetch("http://localhost:8000/api/securityitems")
       .then((response) => response.json())
@@ -42,6 +45,8 @@ class SecurityItems extends React.Component {
   }
 
   render() {
+    // ITERATE THROUGH ARRAY IN STATE AND GENERATE CODE TO OUTPUT TO DOM
+
     const items = this.state.items.map((item) => {
       return <Item itemName={item.name} key={item.id} />;
     });
