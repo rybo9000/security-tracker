@@ -15,4 +15,8 @@ function AddNewButton(props) {
   );
 }
 
+AddNewButton.defaultProps = {
+  link: "test",
+};
+
 export default AddNewButton;

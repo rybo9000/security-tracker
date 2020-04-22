@@ -1,9 +1,5 @@
 import React from "react";
 
-import StatsHalf from "../StatsHalf/StatsHalf";
-import StatsFull from "../StatsFull/StatsFull";
-import StatsContainer from "../StatsContainer/StatsContainer";
-
 // COMPONENT FOR LANDING PAGE INFORMATION
 function Welcome() {
   return (
