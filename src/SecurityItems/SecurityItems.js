@@ -6,6 +6,7 @@ import Nav from "../Nav/Nav";
 import Main from "../Main/Main.js";
 import Item from "../Item/Item";
 import AddNewButton from "../AddNewButton/AddNewButton";
+import config from "../config/config.js";
 
 class SecurityItems extends React.Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class SecurityItems extends React.Component {
 
   // PULL LIST OF SECURITY ITEMS FROM DB AND SET IN STATE
   componentDidMount() {
-    fetch("http://localhost:8000/api/securityitems")
+    fetch(`${config.REACT_APP_API_ENDPOINT}/api/securityitems`)
       .then((response) => response.json())
       .then((items) =>
         this.setState({

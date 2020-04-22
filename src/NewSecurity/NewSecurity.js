@@ -22,7 +22,7 @@ class NewSecurity extends React.Component {
 
   componentDidMount() {
     // PULL THE LIST OF CATEGORIES FROM THE DB AND SET IN STATE / USED FOR DROPDOWN MENU
-    fetch("http://localhost:8000/api/categories")
+    fetch(`${config.REACT_APP_API_ENDPOINT}/api/categories`)
       .then((response) => response.json())
       .then((categories) =>
         this.setState({

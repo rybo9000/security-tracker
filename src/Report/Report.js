@@ -54,7 +54,7 @@ class Report extends React.Component {
       );
 
     // OBTAIN SECURITY ITEMS AND SET IN STATE
-    fetch("http://localhost:8000/api/securityitems")
+    fetch(`${config.REACT_APP_API_ENDPOINT}/api/securityitems`)
       .then((response) => response.json())
       .then((securityitems) =>
         this.setState({
