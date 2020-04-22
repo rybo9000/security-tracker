@@ -24,16 +24,16 @@
 
 ### Screenshots
 
-![Security Tracker Security Items](https://github.com/rybo9000/repo-content/blob/master/ST_1.PNG?raw=true)
+![Security Tracker Security Items](https://github.com/rybo9000/repo-content/blob/master/ST_1.png?raw=true)
 
 ---
 
-![Security Tracker Add New Security Item](https://github.com/rybo9000/repo-content/blob/master/ST_2.PNG?raw=true)
+![Security Tracker Add New Security Item](https://github.com/rybo9000/repo-content/blob/master/ST_2.png?raw=true)
 
 ---
 
-![Security Tracker Edit Client](https://github.com/rybo9000/repo-content/blob/master/ST_3.PNG?raw=true)
+![Security Tracker Edit Client](https://github.com/rybo9000/repo-content/blob/master/ST_3.png?raw=true)
 
 ---
 
-![Security Tracker Client Report](https://github.com/rybo9000/repo-content/blob/master/ST_4.PNG?raw=true)
+![Security Tracker Client Report](https://github.com/rybo9000/repo-content/blob/master/ST_4.png?raw=true)
