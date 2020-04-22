@@ -8,7 +8,7 @@ import StatsContainer from "../StatsContainer/StatsContainer";
 function Welcome() {
   return (
     <div>
-      <h1>Welcome to the Axxys Security Tracker!</h1>
+      <h1>Welcome to the Security Tracker!</h1>
       <h2>What is this?</h2>
       <p>
         This tool is designed to help a company track the security posture of

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Header.css";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import logo from "../img/axxys-logo.png";
+import logo from "../img/SecurityTrackerLogo.png";
 
 // HEADER COMPONENT ACROSS ENTIRE SITE
 class Header extends React.Component {

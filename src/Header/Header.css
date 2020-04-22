@@ -18,7 +18,7 @@ header {
 }
 
 #logo {
-  max-height: 75px;
+  max-height: 50px;
   width: auto;
 }
 
@@ -28,7 +28,7 @@ header {
   }
 
   #logo {
-    max-height: 55px;
+    max-height: 30px;
     width: auto;
   }
 }
